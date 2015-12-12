@@ -1,0 +1,294 @@
+% (c) 2002 Matthew Boedicker <mboedick@mboedick.org> (original author) http://mboedick.org
+% (c) 2003-2007 David J. Grant <davidgrant-at-gmail.com> http://www.davidgrant.ca
+% (c) 2008 Nathaniel Johnston <nathaniel@nathanieljohnston.com> http://www.nathanieljohnston.com
+% (c) 2011 Scott Clark <sc932@cornell.edu> http://cam.cornell.edu/~sc932
+%
+
+%This work is licensed under the Creative Commons Attribution-Noncommercial-Share Alike 2.5 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/2.5/ or send a letter to Creative Commons, 543 Howard Street, 5th Floor, San Francisco, California, 94105, USA.
+
+\documentclass[letterpaper,11pt]{article}
+\newlength{\outerbordwidth}
+\pagestyle{empty}
+\raggedbottom
+\raggedright
+\usepackage[svgnames]{xcolor}
+\usepackage{framed}
+\usepackage{tocloft}
+\usepackage{etoolbox}
+\usepackage{hyperref}
+\robustify\cftdotfill
+
+%-----------------------------------------------------------
+%Edit these values as you see fit
+\setlength{\outerbordwidth}{3pt}  % Width of border outside of title bars
+\definecolor{shadecolor}{gray}{0.75}  % Outer background color of title bars (0 = black, 1 = white)
+\definecolor{shadecolorB}{gray}{0.93}  % Inner background color of title bars
+
+%-----------------------------------------------------------
+%Margin setup
+\setlength{\evensidemargin}{-0.25in}
+\setlength{\headheight}{-0.25in}
+\setlength{\headsep}{0in}
+\setlength{\oddsidemargin}{-0.25in}
+\setlength{\paperheight}{11in}
+\setlength{\paperwidth}{8.5in}
+\setlength{\tabcolsep}{0in}
+\setlength{\textheight}{9.75in}
+\setlength{\textwidth}{7in}
+\setlength{\topmargin}{-0.3in}
+\setlength{\topskip}{0in}
+\setlength{\voffset}{0.1in}
+
+%-----------------------------------------------------------
+%Custom commands
+\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+\newcommand{\resheading}[1]{\vspace{8pt}
+  \parbox{\textwidth}{\setlength{\FrameSep}{\outerbordwidth}
+    \begin{shaded}
+
+\setlength{\fboxsep}{0pt}\framebox[\textwidth][l]{\setlength{\fboxsep}{4pt}\fcolorbox{shadecolorB}{shadecolorB}{\textbf{\sffamily{\mbox{~}\makebox[6.762in][l]{\large #1} \vphantom{p\^{E}}}}}}
+    \end{shaded}
+  }\vspace{-5pt}
+}
+
+\newcommand{\ressubheading}[4]{
+\begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{#3} & \textit{#4} \\
+\end{tabular*}\vspace{-6pt}}
+
+\newcommand{\ressubheadingTwo}[2]{
+\begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		\textbf{#1} & #2
+\end{tabular*}\vspace{-6pt}}
+
+%-----------------------------------------------------------
+\begin{document}
+
+\begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
+
+\textbf{\Large Xi Yang} & \textbf{\today} \\
+\texttt{xi.yang@anu.edu.au} & \texttt{\href{https://yangxi.github.io}{yangxi.github.io}} \\
+\texttt{School of Computer Science} & \texttt{Australian National University}
+
+\end{tabular*}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resheading{Research Interests}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+My research interests are programing language implementations, computer
+architecture, and operating systems, especially focusing on optimizing programming 
+language runtime systems for CPU micro-architecture.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resheading{Education}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{itemize}
+
+\item
+	\ressubheading{Australian National University}{Canberra,
+          Australia}{Ph.D. Computer Science}{Oct. 2011 - Date}
+	\begin{itemize}
+		\resitem{Supervisors: Prof. Steve Blackburn, Prof. Kathryn McKinley}
+	\end{itemize}
+
+\item
+	\ressubheading{Australian National University}{Canberra, Australia}{Mphil
+          Computer Science }{May 2009 - March 2011}
+	\begin{itemize}
+		\resitem{Thesis: Locality Aware Zeroing: Exploiting Both
+                    Hardware and Software Semantics}
+                \resitem{Supervisors: Prof. Steve Blackburn, Prof. Kathryn McKinley}
+	\end{itemize}
+
+\item
+	\ressubheading{University of Electronic Science and Technology of
+          China}{Chengdu, China}{B.S. Computer Science}{Sept. 2004 - July 2008}
+        \begin{itemize}         
+          \resitem{Thesis: RTEMS on L4 Microkernel}
+           \resitem{Supervisor: Dr. Kevin Elphinstone}
+          \resitem{I did the work at NICTA's ERTOS group, University of New
+            South Wales as a visitor student.}
+          \end{itemize}
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resheading{Honors and Awards}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+\item{{\bf ANU PhD. Scholarship:} Three year full scholarship.}
+\item{{\bf 2012 Google Australia PhD Fellowship in Energy Aware Computing:} One year fellowship, one of three
+  awarded in Australia and 40 worldwide.}
+\item{Paper selected for {\bf Communications of the ACM Research
+      Highlights}. {\it ``Looking
+  Back and Looking Forward: Power, Performance, and Upheaval''}}
+\item{Paper selected for {\bf IEEE Micro Top Picks from the 2011 Computer
+      Architecture Conferences}. {\it ``What Is Happening to Power, Performance, and Software?''}}
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resheading{Publications}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{itemize}
+
+\item {\bf X. Yang}, S. M. Blackburn, and K. S. McKinley, \href{https://github.com/yangxi/papers/raw/master/shim-isca-2015.pdf} {\color{blue} \bf
+    "Computer Performance Microscopy with SHIM"}, in Proceedings of the 42nd International 
+     Symposium on Computer Architecture {\bf (ISCA) }, Portland,
+     OR, June 13-17, 2015.
+
+\item R. Shahriyar, S. M. Blackburn, {\bf X. Yang}, and K. M. McKinley,
+  \href{https://github.com/yangxi/papers/raw/master/rcix-oopsla-2013.pdf}{\color{blue} \bf
+      ``Taking Off the Gloves with Reference Counting Immix''}, in Proceedings of 
+      the 2013 ACM SIGPLAN Conference on Object-Oriented Programming, Systems,
+      Languages, and Applications {\bf (OOPSLA)}, Indianapolis, IN,
+      October 26-31, 2013.
+
+\item{\bf X. Yang}, D. Frampton, S. M. Blackburn, and A. L. Hosking,
+  \href{https://github.com/yangxi/papers/raw/master/barrier-ismm-2012.pdf}{\color{blue} \bf
+    "Barriers Reconsidered, Friendlier Still!"}, in Proceedings of the 2012
+  International Symposium on Memory Management {\bf (ISMM) }, Beijing,
+  China, June 15-16, 2012.
+
+\item H. Esmaeilzadeh, T. Cao, {\bf X. Yang}, S. M. Blackburn, and
+    K. S. McKinley,
+    \href{https://github.com/yangxi/papers/raw/master/powerperf-micro-2012.pdf}{\color{blue}
+      \bf "What is Happening to Power, Performance, and
+      Software?,"}, {\bf IEEE Micro}, vol. 32, pp. 110-121, 2012. 
+
+\item H. Esmaeilzadeh, T. Cao, {\bf X. Yang}, S. M. Blackburn, and
+    K. S. McKinley, \href{https://github.com/yangxi/papers/raw/master/powerperf-cacm-2012.pdf}{\color{blue}\bf "Looking Back and Looking Forward: Power, Performance,
+      and Upheaval,"}, {\bf Communications of the ACM}, vol. 55, iss. 7, pp. 105-114, 2012.
+
+\item {\bf X. Yang}, S. M. Blackburn, D. Frampton, J. B. Sartor, and
+  K. S. McKinley,
+  \href{https://github.com/yangxi/papers/raw/master/zero-oopsla-2011.pdf}
+  {\color{blue} \bf ``Why Nothing Matters: The Impact of Zeroing''}, in Proceedings of 
+the 2011 ACM SIGPLAN Conference on Object-Oriented Programming, Systems, Languages, and Applications {\bf (OOPSLA)}, Portland, OR, October 22-27, 2011.
+
+\item H. Esmaeilzadeh, S. M. Blackburn, T. Cao, {\bf X. Yang}, and
+  K. S. McKinley,
+  \href{https://github.com/yangxi/papers/raw/master/powerperf-asplos-2011.pdf}
+  {\color{blue} \bf ``Looking Back on the Language and Hardware Revolution:
+    Measured Power, Performance, and Scaling''}, in Proceedings of the 16th
+  International Conference on Architectural Support for Programming Languages
+  and Operating Systems {\bf (ASPLOS)}, Newport Beach, CA, USA, March 5-11,
+  2011.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resheading{Research Experience}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{itemize}
+
+\item
+	\ressubheading{Australian National University}{Canberra,
+          Australia}{Ph.D. Computer Science}{Oct. 2011 - Date}
+	\begin{itemize}
+                \resitem {Improve the CPU utilization of performance-critical
+                workloads with fine-grain feedback information from the SHIM
+                profiler. {\bf In Progress}}
+
+                \resitem {Designed and implemented SHIM, a continuous profiler
+                that samples at resolutions as fine as 15 cycles; three to five
+                orders of magnitude finer than current continuous
+                profilers. SHIM is an open source project. {\bf ISCA 2015}}
+
+		\resitem {Evaluated overheads of a range of useful barriers used
+                by managed language runtime systems on a range of modern
+                hardware and workloads. {\bf ISMM 2012}}
+
+	\end{itemize}
+
+\item
+	\ressubheading{Australian National University}{Canberra, Australia}{Mphil
+          Computer Science }{May 2009 - March 2011}
+	\begin{itemize}
+          \resitem {Analyzed the overhead of zero initialization, discovered the
+          cost is surprisingly high, and proposed three better designs to reduce
+          the direct and indirect zeroing costs simultaneously. The three new
+          zeroing approaches are in Jikes RVM now.  {\bf OOPSLA 2011}}
+
+          \resitem {Helped to analyze measured chip power and performance on five
+          process technology generations executing 61 diverse benchmarks with a
+          rigorous methodology. {\bf ASPLOS 2011}}
+          
+	\end{itemize}
+
+\item
+	\ressubheading{University of Electronic Science and Technology of
+          China}{Chengdu, China}{B.S. Computer Science}{Sept. 2004 - July 2008}
+        \begin{itemize}         
+          \resitem {Ported the RTEMS, a single address space RTOS, to the L4
+          Microkernel, and evaluated the performance. Parts of the project,
+          PXA255 and Gumstix BSP, were contributed to the RTEMS.}
+          \end{itemize}
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resheading{Selected Open Source Projects}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+\item
+  \ressubheadingTwo{SHIM}{\texttt{\color{blue} github.com/shimProfiler/SHIM}}
+  \begin{itemize}
+    \resitem{SHIM is a open source high frequency continuous profiler. I designed,
+      implemented, and maintain the project.}
+  \end{itemize}
+\item
+  \ressubheadingTwo{Jikes RVM on
+    OpenJDK}{\texttt{\href{http://hg.code.sourceforge.net/p/jikesrvm/code/shortlog/1c39f36bc842}{\color{blue}
+        RVM-549-OpenJDK}}}    
+  \begin{itemize}
+    \resitem{Jikes RVM is not able to run many new and important applications
+      because it is using the GNU Classpath library and the library is
+      not in active development anymore. This project attempts to port the OpenJDK
+      library to Jikes RVM to fix the problem.}
+  \end{itemize}
+\item
+  \ressubheadingTwo{RTEMS on the Cortex-M3 CPU of OMAP4 SoC}{\texttt{\color{blue} https://github.com/yangxi/omap4m3}}
+  \begin{itemize}
+    \resitem{The OMAP4 SoC has the potential to
+      become a nice research platform for researchers who are interested in the
+      heterogeneous system, since it has two big Cortex-A9
+      cores and two small Cortex-M3 cores. However, because there is no open
+      source RTOS running on the small cores, it is hard to try ideas on the
+      platform. This project ported the RTEMS to the
+      small M3 cores. The RTEMS is loaded by and communicates with the Linux
+      kernel running on the big A9 cores.}
+    \end{itemize}
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resheading{Community Services}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+  \item
+  \ressubheadingTwo{Program Committee Member}{}
+  \begin{itemize}
+  \resitem{OOPSLA'13 AEC}
+  \end{itemize}
+\end{itemize}
+
+\end{document}
