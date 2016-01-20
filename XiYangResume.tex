@@ -81,7 +81,7 @@
 
 My research interests are programing language implementations, computer
 architecture, and operating systems, especially micro-architecture aware
-optimization techniques.
+optimizations.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -113,7 +113,7 @@ optimization techniques.
           China}{Chengdu, China}{B.S. Computer Science}{Sept. 2004 - July 2008}
         \begin{itemize}         
           \resitem{Thesis: RTEMS on L4 Microkernel}
-           \resitem{Supervisor: Dr. Kevin Elphinstone}
+           \resitem{Supervisor: Prof. Kevin Elphinstone}
           \resitem{I did the work at NICTA's ERTOS group, University of New
             South Wales as a visitor student.}
           \end{itemize}
@@ -125,7 +125,8 @@ optimization techniques.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{itemize}
-\item{{\bf ANU PhD. Scholarship:} Three year full scholarship.}
+\item{Paper recognized as Honorable Mention in {\bf IEEE Micro Top Picks from the 2015 Computer
+      Architecture Conferences}. {\it ``Computer Performance Microscopy with SHIM''}}
 \item{{\bf 2012 Google Australia PhD Fellowship in Energy Aware Computing:} One year fellowship, one of three
   awarded in Australia and 40 worldwide.}
 \item{Paper selected for {\bf Communications of the ACM Research
@@ -201,7 +202,7 @@ the 2011 ACM SIGPLAN Conference on Object-Oriented Programming, Systems, Languag
           Australia}{Ph.D. Computer Science}{Oct. 2011 - Date}
 	\begin{itemize}
                 \resitem {Improve the CPU utilization of performance-critical
-                workloads with fine-grain feedback information from the SHIM
+                workloads with fine-grain feedback information from SHIM
                 profiler. {\bf In Progress}}
 
                 \resitem {Designed and implemented SHIM, a continuous profiler
@@ -224,7 +225,7 @@ the 2011 ACM SIGPLAN Conference on Object-Oriented Programming, Systems, Languag
           the direct and indirect zeroing costs simultaneously. The three new
           zeroing approaches are in Jikes RVM now.  {\bf OOPSLA 2011}}
 
-          \resitem {Helped to analyze measured chip power and performance on five
+          \resitem {Analyzed measured chip power and performance on five
           process technology generations executing 61 diverse benchmarks with a
           rigorous methodology. {\bf ASPLOS 2011}}
           
@@ -250,7 +251,7 @@ the 2011 ACM SIGPLAN Conference on Object-Oriented Programming, Systems, Languag
 \item
   \ressubheadingTwo{SHIM}{\texttt{\color{blue} github.com/shimProfiler/SHIM}}
   \begin{itemize}
-    \resitem{SHIM is a open source high frequency continuous profiler. I designed,
+    \resitem{SHIM is an open source high frequency continuous profiler. I designed,
       implemented, and maintain the project.}
   \end{itemize}
 \item
@@ -258,19 +259,17 @@ the 2011 ACM SIGPLAN Conference on Object-Oriented Programming, Systems, Languag
     OpenJDK}{\texttt{\href{http://hg.code.sourceforge.net/p/jikesrvm/code/shortlog/1c39f36bc842}{\color{blue}
         RVM-549-OpenJDK}}}    
   \begin{itemize}
-    \resitem{Jikes RVM is not able to run many new and important applications
-      because it is using the GNU Classpath library and the library is
-      not in active development anymore. This project attempts to port the OpenJDK
-      library to Jikes RVM to fix the problem.}
+    \resitem{Jikes RVM is not able to run many new critical applications
+      because it is using the GNU Classpath library but not the state-of-the-art
+      one OpenJDK library. This project ports the OpenJDK library to Jikes RVM.}
   \end{itemize}
 \item
   \ressubheadingTwo{RTEMS on the Cortex-M3 CPU of OMAP4 SoC}{\texttt{\color{blue} https://github.com/yangxi/omap4m3}}
   \begin{itemize}
-    \resitem{The OMAP4 SoC has the potential to
-      become a nice research platform for researchers who are interested in the
-      heterogeneous system, since it has two big Cortex-A9
+    \resitem{The OMAP4 SoC is an interesting platform for researchers who are interested in
+      heterogeneous systems because it has two big Cortex-A9
       cores and two small Cortex-M3 cores. However, because there is no open
-      source RTOS running on the small cores, it is hard to try ideas on the
+      source RTOS running on the small cores, it is hard to prototype ideas on the
       platform. This project ported the RTEMS to the
       small M3 cores. The RTEMS is loaded by and communicates with the Linux
       kernel running on the big A9 cores.}
@@ -288,6 +287,7 @@ the 2011 ACM SIGPLAN Conference on Object-Oriented Programming, Systems, Languag
   \ressubheadingTwo{Program Committee Member}{}
   \begin{itemize}
   \resitem{OOPSLA'13 AEC}
+  \resitem{PLDI'16 ERC}
   \end{itemize}
 \end{itemize}
 
