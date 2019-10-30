@@ -68,8 +68,8 @@
 \begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
 
 \textbf{\Large Xi Yang} & \textbf{\today} \\
-\texttt{xi.yang@anu.edu.au} & \texttt{\href{https://yangxi.github.io}{yangxi.github.io}} \\
-\texttt{School of Computer Science} & \texttt{Australian National University}
+\texttt{hiyangxi@gmail.com} & \texttt{\href{https://yangxi.github.io}{yangxi.github.io}} \\
+\texttt{Software Engineer at Confluent}
 
 \end{tabular*}
 
@@ -83,8 +83,8 @@ Craft platforms with which humane people can control the fire of computing.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-My research interests focus on creating new tools for understanding computer
-system behavior.
+My research focuses on creating new tools for understanding
+and controlling the run-time behavior of complex computer systems.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -97,8 +97,9 @@ system behavior.
 
 \item
 	\ressubheading{Australian National University}{Canberra,
-          Australia}{Ph.D. Computer Science}{Oct. 2011 - Date}
+          Australia}{Ph.D. Computer Science}{Oct. 2011 - May. 2019}
 	\begin{itemize}
+                \resitem{Thesis: SHIM and Its Applications}
 		\resitem{Supervisors: Prof. Steve Blackburn, Prof. Kathryn McKinley}
 	\end{itemize}
 
@@ -116,9 +117,9 @@ system behavior.
           China}{Chengdu, China}{B.S. Computer Science}{Sept. 2004 - July 2008}
         \begin{itemize}         
           \resitem{Thesis: RTEMS on L4 Microkernel}
-           \resitem{Supervisor: Prof. Kevin Elphinstone}
-          \resitem{I did the project at NICTA's ERTOS group, University of New
-            South Wales as a visitor student.}
+          \resitem{Supervisor: Prof. Kevin Elphinstone}
+          \resitem{I did the thesis at the ERTOS group (NICTA), University of New
+            South Wales as a visiting student.}
           \end{itemize}
 \end{itemize}
 
@@ -136,7 +137,8 @@ system behavior.
       Highlights}. {\it ``Looking
   Back and Looking Forward: Power, Performance, and Upheaval''}}
 \item{Paper selected for {\bf IEEE Micro Top Picks from the 2011 Computer
-      Architecture Conferences}. {\it ``What Is Happening to Power, Performance, and Software?''}}
+      Architecture Conferences}. {\it ``What Is Happening to Power,
+      Performance, and Software?''}}
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -207,17 +209,27 @@ the 2011 ACM SIGPLAN Conference on Object-Oriented Programming, Systems, Languag
 
 \item
 	\ressubheading{Australian National University}{Canberra,
-          Australia}{Ph.D. Computer Science}{Oct. 2011 - Date}
+          Australia}{Ph.D. Computer Science}{Oct. 2011 - May. 2019}
 	\begin{itemize}
-                \resitem {Designed and implemented Elfen, a scheduler for improving the datacenter CPU utilization by co-running
-                  latency critical workloads and batch workloads on SMT CPUs. {\bf USENIX ATC 2016}}
+                \resitem {Designed and implemented Tailor, a real-time
+                  latency controller that uses a SHIM-based
+                  high-frequency profiler and an application-level
+                  network proxy to continuously monitor and act on
+                  hazardous system behaviors.}
+                  
+                \resitem {Designed and implemented Elfen {\texttt{\color{blue} https://github.com/yangxi/elfen}}, a scheduler
+                  that co-runs latency-critical workloads and batch
+                  workloads on the same SMT CPUs. Elfen significantly
+                  improves the datacenter CPU utilization without
+                  affecting latency-critical workloads.
+                   {\bf USENIX ATC 2016}}
 
-                \resitem {Designed and implemented SHIM, a continuous profiler
+                \resitem {Designed and implemented SHIM {\texttt{\color{blue} https://github.com/yangxi/SHIM}}, a continuous profiler
                 that samples at resolutions as fine as 15 cycles; three to five
                 orders of magnitude finer than current continuous
                 profilers. {\bf ISCA 2015}}
 
-		\resitem {Evaluated overheads of managed language runtime barriers. {\bf ISMM 2012}}
+		\resitem {Evaluated the overhead of managed language runtime barriers. {\bf ISMM 2012}}
 
 	\end{itemize}
 
@@ -225,13 +237,14 @@ the 2011 ACM SIGPLAN Conference on Object-Oriented Programming, Systems, Languag
 	\ressubheading{Australian National University}{Canberra, Australia}{Mphil
           Computer Science }{May 2009 - March 2011}
 	\begin{itemize}
-          \resitem {Analyzed the overhead of zero initialization, discovered the
-          cost is surprisingly high, and proposed three better designs to reduce
+          \resitem {Analyzed the overhead of zero initialization,
+            discovered that the
+          cost is high for Java workloads, and proposed three better designs to reduce
           the direct and indirect zeroing costs simultaneously. The three new
-          zeroing approaches are in Jikes RVM now.  {\bf OOPSLA 2011}}
+          zeroing approaches are in JikesRVM now.  {\bf OOPSLA 2011}}
 
-          \resitem {Analyzed measured chip power and performance on five
-          process technology generations executing 61 diverse benchmarks with a
+          \resitem {Analyzed directly measured power and performance
+            of five generations of Intel CPUs executing 61 diverse benchmarks with a
           rigorous methodology. {\bf ASPLOS 2011}}
           
 	\end{itemize}
@@ -241,8 +254,8 @@ the 2011 ACM SIGPLAN Conference on Object-Oriented Programming, Systems, Languag
           China}{Chengdu, China}{B.S. Computer Science}{Sept. 2004 - July 2008}
         \begin{itemize}         
           \resitem {Ported the RTEMS, a single address space RTOS, to the L4
-          Microkernel, and evaluated the performance. Parts of the project,
-          PXA255 and Gumstix BSP, were contributed to the RTEMS.}
+          Microkernel, and evaluated the performance. Contributed parts of the project,
+          PXA255 and Gumstix BSP, to the open source RTEMS operating system.}
       \end{itemize}
     \end{itemize}
 
@@ -256,43 +269,22 @@ the 2011 ACM SIGPLAN Conference on Object-Oriented Programming, Systems, Languag
 
 \begin{itemize}
 
-\item
-	\ressubheading{Terrain Data}{Sydney, Australia}{Engineer}{2017 - Date}
-	\begin{itemize}
-                \resitem {Help to create the first interactive algorithm
-                  management system, with which non-tech users can
-                  manage, annotate, and search their structural data.}
-              \end{itemize}
-        \end{itemize}
-   
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\resheading{Selected Open Source Projects}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{itemize}
   \item
-  \ressubheadingTwo{Elfen}{\texttt{\color{blue} https://github.com/yangxi/elfen}}
-  \begin{itemize}
-    \resitem{Elfen is a scheduler for co-running batch jobs with
-      latency critical jobs.}
-  \end{itemize}
-\item
-  \ressubheadingTwo{SHIM}{\texttt{\color{blue} https://github.com/yangxi/SHIM}}
-  \begin{itemize}
-    \resitem{SHIM is an open source high frequency continuous profiler.}
-  \end{itemize}
-\item
-  \ressubheadingTwo{RTEMS on the Cortex-M3 CPU of OMAP4 SoC}{\texttt{\color{blue} https://github.com/yangxi/omap4m3}}
-  \begin{itemize}
-    \resitem{The OMAP4 SoC has two big Cortex-A9 cores and two small
-      Cortex-M3 cores. This project ported the RTEMS to the
-      small M3 cores. The RTEMS is loaded by the Linux, and communicates with the Linux
-      kernel running on the big A9 cores.}
-    \end{itemize}
+	\ressubheading{Confluent}{Sydney, Australia}{Software Engineer}{2018 - Date}
+	\begin{itemize}
+                \resitem {Build a distributed performance evaluation
+                  framework for the Apache Kafka platform.}
+        \end{itemize}
+  \item
+	\ressubheading{Terrain Data}{Sydney, Australia}{Software Engineer}{2017 - 2018}
+	\begin{itemize}
+                \resitem {Helped to create the first interactive algorithm
+                  management system with which non-tech users can
+                  manage, annotate, and search their structural data.}
+         \end{itemize}
 \end{itemize}
 
+   
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \resheading{Community Services}
